@@ -1,0 +1,184 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="wrapper">
+          <div class="vacan-box" id="btn">
+            <div class="text-box">
+              <h1 class="title">Вакансии</h1>
+              <p class="text">Хочешь работать у нас?</p>
+            </div>
+            <form action="form-group" method="post">
+              {% csrf_token %}
+              <input type="text" name="name" placeholder="Введите ваше имя: "/>
+              <input type="tel" name="tel" placeholder="Введите ваш номер: "/>
+            </form>
+            <button type="submit" onclick="changeZIndex()">Отправить</button>
+          </div>
+          <nav class="header-nav">
+            <ul class="nav-ul">
+              <li class="nav-li"><a href="" class="nav-a">Главная</a></li>
+              <li class="nav-li"><a href="" class="nav-a">Производство</a></li>
+              <li class="nav-li"><a class="nav-a" onclick="changeZIndex()">Вакансии</a></li>
+            </ul>
+            <img src="{% static 'image/logo_kantsut.png' %}" alt="" width="156" class="logo-img" />
+            <ul class="nav-ul">
+              <li class="nav-li"><a href="" class="nav-a">Контакты</a></li>
+              <li class="nav-li"><a href="" class="nav-a">О нас</a></li>
+              <li class="nav-li"><a href="" class="nav-a">Информация</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <video src="media/video/video.mp4" loop muted autoplay class="video"></video>
+    </header>
+    <main>
+      <section class="about">
+        <div class="box-about">
+          <div class="wrapper">
+            <div class="about-text">
+              <h1 class="main-title">О нас</h1>
+              <pre class="text-about">
+                  Уже 25 лет мы прикладываем все усилия чтобы на столах наших
+                  любимых клиентов были здоровые и полезные молочные продукты. Мы
+                  работаем на рынке Кыргызской Республики, с середины 90-х годов, в
+                  разных форматах. Сейчас деятельность нашей компании сосредоточена
+                  на развитии натуральной продукции торговой марки «Белая Река».
+                  Молочная продукция «Белая Река» завоевала сердца миллионов
+                  покупателей по всему Кыргызстану и Казахстану. Мы надеемся, что
+                  наш маленький успех – это только начало пути к здоровью и заботе о
+                  самых близких, которым мы покупаем молочные продукты «Белая Река».
+                  Спасибо что вы с нами!
+                </pre
+              >
+            </div>
+          </div>
+          <img src="{% static 'image/bg1.png' %}" alt="" class="about-img" />
+        </div>
+        <div class="wrapper">
+          <div class="cards">
+            <div class="card">
+              <img src="{% static 'image/about1.png' %}" alt="" class="img-card" />
+              <h1 class="card-title">Продукция</h1>
+              <p class="card-text">
+                Наша специализация — производство сливочного масла,
+                кисломолочной и кислородной продукции из чистого сырья.
+              </p>
+            </div>
+            <div class="card">
+              <img src="{% static 'image/about2.png' %}" alt="" class="img-card" />
+              <h1 class="card-title">Производство</h1>
+              <p class="card-text">
+                В 2012 году на территории завода было построено новое здание с
+                современным оборудованием по переработке и фасовке молочной
+                продукции. Предприятие работает в режиме полного цикла.
+              </p>
+            </div>
+            <div class="card">
+              <img src="{% static 'image/about3.png' %}" alt="" class="img-card" />
+              <h1 class="card-title">Качество</h1>
+              <p class="card-text">
+                Высокое качество товара подтверждает международный стандарт ISO
+                22000 «Системы менеджмента безопасности пищевой продукции» и
+                сертификат «Халяль».
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="news">
+        <div class="wrapper">
+          <h1 class="main-title news-title">Производство</h1>
+          <div class="news-cards">
+            <div class="new-card">
+              <img src="{% static 'image/production1.jpg' %}" alt="" />
+              <h1 class="new-title">Сбор молока</h1>
+              <p class="new-text">
+                Молоко поступает из лучших фермерских хозяйств экологически
+                чистых районов Чуйской области
+              </p>
+            </div>
+            <div class="new-card">
+              <img src="{% static 'image/production2.jpg' %}" alt="" />
+              <h1 class="new-title">Анализ сырья</h1>
+              <p class="new-text">
+                В лаборатории завода проводят строгий контроль качества сырья
+              </p>
+            </div>
+            <div class="new-card">
+              <img src="{% static 'image/production3.jpg' %}" alt="" />
+              <h1 class="new-title">Прием и переработка</h1>
+              <p class="new-text">
+                Молоко очищают, охлаждают и перерабатывают для достижения нужной
+                пропорции жирности
+              </p>
+            </div>
+            <div class="new-card">
+              <img src="{% static 'image/production4a.jpg' %}" alt="" />
+              <h1 class="new-title">Получение готовых молочных продуктов</h1>
+              <p class="new-text">
+                Каждый вид продукции производят и фасуют в отдельных цехах.
+              </p>
+            </div>
+            <div class="new-card">
+              <img src="{% static 'image/production5.jpg' %}" alt="" />
+              <h1 class="new-title">Анализ готовой продукции в лаборатории</h1>
+              <p class="new-text">
+                Готовую продукцию проверяют на соответствие требованиям
+                санитарных норм
+              </p>
+            </div>
+            <div class="new-card">
+              <img src="{% static 'image/production6.jpg' %}" alt="" />
+              <h1 class="new-title">Доставка продукции потребителям</h1>
+              <p class="new-text">
+                Потребитель получает нашу продукцию меньше, чем за сутки с
+                момента выпуска
+              </p>
+            </div>
+            {% for i in product%}
+            <div class="new-card">
+              <img src="{{ i.image.url }}" alt="" />
+              <h1 class="new-title">{{i.title}}</h1>
+              <p class="new-text">
+                {{i.text}}
+              </p>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="box-footer">
+        <h1 class="main-title size-foot">Сделала Студентка 3 курса</h1>
+      </div>
+    </footer>
+    <script>
+        function changeZIndex() {
+            const text = document.getElementById('btn');
+            if (text.style.zIndex == -12) {
+                text.style.zIndex = 12;
+                text.style.opacity = 1
+            } else {
+                text.style.zIndex = -12;
+                text.style.opacity = 0
+            }
+        }
+    </script>
+  </body>
+</html>
