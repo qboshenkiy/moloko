@@ -31,15 +31,15 @@
           </div>
           <nav class="header-nav">
             <ul class="nav-ul">
-              <li class="nav-li"><a href="" class="nav-a">Главная</a></li>
-              <li class="nav-li"><a href="" class="nav-a">Производство</a></li>
+              <li class="nav-li"><a href="#" class="nav-a">Главная</a></li>
+              <li class="nav-li"><a href="#product" class="nav-a">Производство</a></li>
               <li class="nav-li"><a class="nav-a" onclick="changeZIndex()">Вакансии</a></li>
             </ul>
             <img src="{% static 'image/logo_kantsut.png' %}" alt="" width="156" class="logo-img" />
             <ul class="nav-ul">
-              <li class="nav-li"><a href="" class="nav-a">Контакты</a></li>
-              <li class="nav-li"><a href="" class="nav-a">О нас</a></li>
-              <li class="nav-li"><a href="" class="nav-a">Информация</a></li>
+              <li class="nav-li"><a href="#footer" class="nav-a">Контакты</a></li>
+              <li class="nav-li"><a href="#about" class="nav-a">О нас</a></li>
+              <li class="nav-li"><a href="#info" class="nav-a">Информация</a></li>
             </ul>
           </nav>
         </div>
@@ -47,7 +47,7 @@
       <video src="media/video/video.mp4" loop muted autoplay class="video"></video>
     </header>
     <main>
-      <section class="about">
+      <section class="about" id="about">
         <div class="box-about">
           <div class="wrapper">
             <div class="about-text">
@@ -100,7 +100,7 @@
           </div>
         </div>
       </section>
-      <section id="news">
+      <section id="product">
         <div class="wrapper">
           <h1 class="main-title news-title">Производство</h1>
           <div class="news-cards">
@@ -163,7 +163,7 @@
         </div>
       </section>
     </main>
-    <footer>
+    <footer id="footer">
       <div class="box-footer">
         <h1 class="main-title size-foot">Сделала Студентка 3 курса</h1>
       </div>
